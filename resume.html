@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrigank Singh - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 8px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+
+        .header .title {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .contact-info {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 3px;
+        }
+
+        .summary {
+            text-align: justify;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .experience-item, .education-item, .certification-item {
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .job-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .company-name {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .company-name a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .company-name a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .job-duration, .edu-duration {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .job-location, .edu-location {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        .job-description {
+            margin-top: 6px;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+
+        .job-description li {
+            margin-bottom: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .technologies {
+            font-size: 12px;
+            color: #555;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .skill-item {
+            background-color: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .certification-item {
+            margin-bottom: 8px;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .cert-name a {
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .cert-name a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .cert-issuer {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .cert-date {
+            font-size: 11px;
+            color: #888;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 15px;
+            }
+
+            .section {
+                margin-bottom: 15px;
+            }
+
+            .experience-item {
+                page-break-inside: auto;
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+            }
+
+            .education-item {
+                page-break-inside: avoid;
+            }
+
+            .certification-item {
+                page-break-inside: avoid;
+            }
+
+            .cert-name a {
+                color: #1a1a1a;
+                text-decoration: underline;
+            }
+
+            .contact-info a {
+                color: #1a1a1a;
+                text-decoration: underline;
+            }
+
+            .company-name a {
+                color: #1a1a1a;
+                text-decoration: underline;
+            }
+        }
+
+        @page {
+            margin: 0.75cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="resume">
+        <div class="header">
+            <h1>Mrigank Singh</h1>
+            <div class="title">Senior Frontend Engineer</div>
+            <div class="contact-info">
+                <div style="margin-bottom: 5px;">
+                    <a href="mailto:immriganksingh@gmail.com">immriganksingh@gmail.com</a> | 
+                    <a href="tel:+919717334591">+91 9717334591</a> | 
+                    India
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/mrigank-singh-6616a0179/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                    <a href="https://github.com/mriganksingh" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Software engineer with 5+ years of experience building high-performance web applications. Proficient in React, Angular, and Next.js with expertise in TypeScript, modern JavaScript, and state management. Developed AI-powered analytics platform, multi-factor authentication system, enterprise design system, and Progressive Web App (PWA). Led legacy codebase migration, internationalization initiative, and security implementations. Strong communication skills with proven ability to collaborate effectively with cross-functional teams, translate technical concepts to stakeholders, and deliver scalable, maintainable solutions.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div style="font-size: 13px; line-height: 1.6;">
+                <div style="margin-bottom: 5px;"><strong>Frontend:</strong> React.js, Angular, Next.js, JavaScript, TypeScript, Redux, HTML, CSS, Sass, RxJS, Electron.js</div>
+                <div style="margin-bottom: 5px;"><strong>Backend:</strong> Node.js, Python, Flask, Django, Spring Boot, Java</div>
+                <div style="margin-bottom: 5px;"><strong>Databases:</strong> MongoDB, SQL, Snowflake</div>
+                <div style="margin-bottom: 5px;"><strong>Tools & Technologies:</strong> Git, Datadog, Storybook, Material UI, Tailwind CSS, Webpack</div>
+                <div><strong>Methodologies:</strong> Agile, Scrum, Test-Driven Development (TDD), CI/CD, Code Review</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Frontend Engineer</div>
+                        <div class="company-name"><a href="https://thelevel.ai" target="_blank" rel="noopener noreferrer">Level AI</a></div>
+                    </div>
+                    <div class="job-duration">Sep 2025 - Present</div>
+                </div>
+                <div class="job-location">Noida, Uttar Pradesh, India · Hybrid</div>
+                <div class="job-description">
+                    <div style="font-size: 13px; color: #666; margin-bottom: 8px;">Product: Level AI Agent Screen Recording</div>
+                    <ul>
+                        <li>Developed an AI-powered Screen Recording Analyzer using React.js, TypeScript, and Redux with custom HLS video player integration, synchronized transcript view with timestamp navigation, and conversational Q&A interface</li>
+                        <li>Built cross-platform desktop application UI using React.js and Electron.js, creating responsive components and user interfaces for the screen recording software</li>
+                    </ul>
+                    <div class="technologies">Technologies: React.js, Redux, TypeScript, JavaScript, Electron.js, HTML, CSS, Datadog</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer II</div>
+                        <div class="company-name"><a href="https://deliveroo.co.uk" target="_blank" rel="noopener noreferrer">Deliveroo</a></div>
+                    </div>
+                    <div class="job-duration">Sep 2023 - Sep 2025</div>
+                </div>
+                <div class="job-location">Hyderabad, Telangana, India · Hybrid</div>
+                <div class="job-description">
+                    <div style="font-size: 13px; color: #666; margin-bottom: 8px;">Product: Deliveroo's Restaurant Application</div>
+                    <ul>
+                        <li>Engineered a secure multi-factor authentication (MFA) system using Next.js and TypeScript, implementing OAuth 2.0 protocols to enhance application security and reduce unauthorized access attempts</li>
+                        <li>Enhanced restaurant menu management by integrating AI-driven image upscaling and auto-generated product descriptions using RESTful APIs, improving menu presentation quality and reducing manual content creation time</li>
+                        <li>Developed and deployed a Progressive Web App (PWA) using React.js, Redux, and modern web APIs, improving mobile load times and enabling offline functionality for restaurant teams</li>
+                        <li>Integrated Cloudflare Turnstile CAPTCHA solution into API fetch requests to prevent bot attacks and malicious traffic, strengthening platform security and reducing spam</li>
+                        <li>Optimized frontend performance through code splitting, lazy loading, and efficient state management, resulting in improved user experience metrics and faster page rendering</li>
+                    </ul>
+                    <div class="technologies">Technologies: Next.js, React.js, Redux, TypeScript, HTML, CSS, Datadog, Snowflake</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer I</div>
+                        <div class="company-name"><a href="https://www.precisely.com" target="_blank" rel="noopener noreferrer">Precisely</a></div>
+                    </div>
+                    <div class="job-duration">Jan 2022 - Sep 2023</div>
+                </div>
+                <div class="job-location">Noida, Uttar Pradesh, India · Remote</div>
+                <div class="job-description">
+                    <div style="font-size: 13px; color: #666; margin-bottom: 8px;">Product: Precisely EnterWorks (Enterprise-Grade Master Data Management solution)</div>
+                    <ul>
+                        <li>Architected and implemented an enterprise design system using Storybook, creating reusable Angular components with comprehensive documentation to ensure UI/UX consistency across the platform and reduce development time</li>
+                        <li>Led the migration of EnterWorks' legacy Angular codebase to Angular 14, upgrading dependent libraries and refactoring deprecated APIs, resulting in improved performance, enhanced scalability, and improved maintainability</li>
+                        <li>Spearheaded internationalization (i18n) implementation for Angular applications using ngx-translate, supporting multiple languages and locales, optimizing user experiences for global markets</li>
+                    </ul>
+                    <div class="technologies">Technologies: Angular, RxJS, Angular Material, PrimeNG, TypeScript, Sass, Storybook</div>
+                    <div style="margin-top: 8px; font-size: 13px; color: #555;">Recognitions: Precisely Spot Award for outstanding contribution (May 2022)</div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Software Engineer II</div>
+                        <div class="company-name"><a href="https://www.linkedin.com/company/mphrx-inc/" target="_blank" rel="noopener noreferrer">MphRx</a></div>
+                    </div>
+                    <div class="job-duration">Aug 2020 - Jan 2022</div>
+                </div>
+                <div class="job-location">Gurugram, Haryana, India · Remote</div>
+                <div class="job-description">
+                    <div style="font-size: 13px; color: #666; margin-bottom: 8px;">Product: Minerva (Healthcare Data Platform-as-a-Service)</div>
+                    <ul>
+                        <li>Developed a comprehensive hospital surgery booking and management system using React.js and RESTful APIs, streamlining surgical scheduling workflows, reducing booking errors, and improving operational efficiency for hospital staff</li>
+                        <li>Built a real-time video consultation platform using Vonage SDK and WebRTC technology, enabling secure HIPAA-compliant virtual consultations between clinicians and patients with integrated digital note-taking capabilities</li>
+                        <li>Integrated Activiti Business Process Management (BPM) Engine to automate clinical workflows and approval processes, reducing manual administrative tasks and improving overall process efficiency across healthcare operations</li>
+                    </ul>
+                    <div class="technologies">Technologies: React.js, JavaScript, Spring Boot, Java, MongoDB</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Bachelor of Engineering - BE, Instrumentation and Control Engineering</div>
+                        <div class="company-name">Netaji Subhas Institute of Technology</div>
+                        <div style="font-size: 13px; color: #666; margin-top: 3px;">University of Delhi</div>
+                    </div>
+                    <div class="edu-duration">2016 - 2020</div>
+                </div>
+                <div style="font-size: 14px; color: #666; margin-top: 5px;">Grade: CGPA - 8.1/10</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="certification-item">
+                <div class="cert-name"><a href="https://www.udacity.com/certificate/e/2cc28664-c38c-11ed-b093-971d22df2796" target="_blank" rel="noopener noreferrer">Front End Developer: Udacity Nanodegree Program Graduate</a></div>
+                <div class="cert-issuer">Udacity</div>
+                <div class="cert-date">Issued Jul 2023</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-28a6cc74-f3c5-49d1-8959-9c75170957c1/" target="_blank" rel="noopener noreferrer">Angular Front To Back</a></div>
+                <div class="cert-issuer">Udemy</div>
+                <div class="cert-date">Issued Dec 2022</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-975a18a7-8094-44ad-b9a4-5ff62384b97f/" target="_blank" rel="noopener noreferrer">JavaScript: Understanding the Weird Parts</a></div>
+                <div class="cert-issuer">Udemy</div>
+                <div class="cert-date">Issued Dec 2022</div>
+            </div>
+            <div class="certification-item">
+                <div class="cert-name"><a href="https://www.udemy.com/certificate/UC-3197f935-4c08-45b3-a9ad-ad10f798ad73/" target="_blank" rel="noopener noreferrer">The Web Developer Bootcamp</a></div>
+                <div class="cert-issuer">Udemy</div>
+                <div class="cert-date">Issued Apr 2020</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div style="font-size: 13px;">
+                <div style="margin-bottom: 3px;"><strong>English:</strong> Full professional proficiency</div>
+                <div><strong>Hindi:</strong> Native or bilingual proficiency</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
